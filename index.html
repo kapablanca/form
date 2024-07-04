@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The form</title>
+    <meta charset="UTF-8" />
+    <style>
+      :root {
+        font-size: 16px;
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .form-container {
+        max-width: 25rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.6rem;
+        box-sizing: border-box;
+        text-align: left;
+      }
+
+      h1 {
+        color: #198be6;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group label,
+      .form-group input,
+      .form-group button {
+        display: block;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .form-group label {
+        margin-bottom: 0.5rem;
+      }
+
+      .form-group input {
+        width: 100%;
+        max-width: 20rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 0.125rem solid rgba(204, 204, 204, 0.5);
+        border-radius: 0.6rem;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      button {
+        background-color: white;
+        border: 0.16rem solid #198be6;
+        color: #198be6;
+        border-radius: 0.6rem;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <form>
+        <h1>Form</h1>
+        <div class="form-group">
+          <label for="numberInput">Number</label>
+          <input
+            type="number"
+            id="numberInput"
+            min="11"
+            placeholder="Please enter a number"
+          />
+        </div>
+        <div class="button-container">
+          <button type="submit" id="submitButton">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      window.onload = () => {
+        const inputField = document.getElementById("numberInput");
+
+        inputField.addEventListener("input", () => {
+          const value = parseInt(inputField.value);
+        });
+      };
+    </script>
+  </body>
+</html>
