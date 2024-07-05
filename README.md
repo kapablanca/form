@@ -15,7 +15,3 @@ This project contains a simple HTML form with a number input field. The input fi
 ## Usage
 
 To use this form, simply open the `index.html` file in your web browser. Enter a number greater than 10 in the input field and click the "Submit" button.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
